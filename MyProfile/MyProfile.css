@@ -1,0 +1,72 @@
+/* Specify the body font, remove margins and padding, set background color, and hide horizontal overflow */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DCF2F1;
+    overflow-x: hidden; 
+}
+
+/* Style the navigation bar */
+nav {
+    display: flex;
+    align-items: center; /* Center the links vertically */
+    background-color: #3B3486;
+    padding: 0.5em 0; /* Adjust padding */
+    justify-content: space-evenly; /* Divide space equally between links */
+    border-bottom: 2px solid #09f7c7; /* Add a border at the bottom */
+}
+
+/* Style the navigation links */
+nav a {
+    font-size: 18px;
+    color: #FAE7F3;
+    text-decoration: none;
+    padding: 0.5em 2em;
+    margin: 0 2em; /* Adjust margin */
+    transition: background-color 0.3s; /* Add transition effect for better visual feedback */
+}
+
+/* Remove border from the last link to avoid duplication */
+nav a:last-child {
+    border-right: none;
+}
+
+/* On hover, change the link color and background color */
+nav a:hover {
+    color: #FFFFFF; /* Change text color on hover */
+    background-color: #5B518C; /* Change background color on hover */
+    border-radius: 10px; /* Add border radius */
+}
+
+/* Style the container for the main content */
+section.container {
+    display: flex;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* Style the container for the image */
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+/* Style the image */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the container for the text */
+.text-container {
+    flex: 1;
+    padding: 2em;
+    box-sizing: border-box;
+}
