@@ -45,6 +45,7 @@ section.container {
     flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
     padding: 20px;
     height: auto; /* Remove fixed height for better responsiveness */
+    align-items: center; /* Center the items vertically */
 }
 
 /* Style the container for the image */
@@ -53,16 +54,17 @@ section.container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2em;
+    padding: 1em; /* Reduce padding */
     box-sizing: border-box;
 }
 
 /* Style the image */
 .image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 90% !important; /* Reduce the width to 50% of the container */
+    height: 70% !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+    margin-top: 0 !important; /* Ensure there's no top margin */
 }
 
 /* Style the container for the text */
@@ -70,12 +72,16 @@ section.container {
     flex: 1 1 50%; /* Allow the text container to take up half the width on larger screens */
     padding: 2em;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
+@media (min-width: 900px) {
     .image-container img {
-        max-width: 70%; /* Make the image smaller on laptop screens */
+        max-width: 45% !important; /* Further reduce the width on larger screens */
+        max-height: 70% !important;
     }
 }
 
@@ -100,7 +106,7 @@ section.container {
     }
 
     .image-container img {
-        max-width: 100%; /* Reset to full width on smaller screens */
+        max-width: 80% !important; /* Adjust the image width on smaller screens */
     }
 
     .text-container h2 {
